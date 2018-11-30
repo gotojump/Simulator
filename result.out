@@ -1,0 +1,187 @@
+==========================================================================
+Benchmark execs/traces/spec_cpu2006/calculix.CFP.PP200M/calculix.CFP.PP200M
+Actual Cycle 0
+opcodes Processed: 0 of 200001551
+Total Progress   0.0000%
+ IPC( -nan)
+ETC(inf:-nan:-nan)
+==========================================================================
+
+==========================================================================
+Benchmark execs/traces/spec_cpu2006/calculix.CFP.PP200M/calculix.CFP.PP200M
+Actual Cycle 10000000
+opcodes Processed: 24522957 of 200001551
+Total Progress  12.2614%
+ IPC(2.452)
+ETC(00:02:52)
+==========================================================================
+
+==========================================================================
+Benchmark execs/traces/spec_cpu2006/calculix.CFP.PP200M/calculix.CFP.PP200M
+Actual Cycle 20000000
+opcodes Processed: 50013846 of 200001551
+Total Progress  25.0067%
+ IPC(2.501)
+ETC(00:02:27)
+==========================================================================
+
+==========================================================================
+Benchmark execs/traces/spec_cpu2006/calculix.CFP.PP200M/calculix.CFP.PP200M
+Actual Cycle 30000000
+opcodes Processed: 75579185 of 200001551
+Total Progress  37.7893%
+ IPC(2.519)
+ETC(00:02:00)
+==========================================================================
+
+==========================================================================
+Benchmark execs/traces/spec_cpu2006/calculix.CFP.PP200M/calculix.CFP.PP200M
+Actual Cycle 40000000
+opcodes Processed: 96735001 of 200001551
+Total Progress  48.3671%
+ IPC(2.418)
+ETC(00:01:41)
+==========================================================================
+
+==========================================================================
+Benchmark execs/traces/spec_cpu2006/calculix.CFP.PP200M/calculix.CFP.PP200M
+Actual Cycle 50000000
+opcodes Processed: 115456707 of 200001551
+Total Progress  57.7279%
+ IPC(2.309)
+ETC(00:01:24)
+==========================================================================
+
+==========================================================================
+Benchmark execs/traces/spec_cpu2006/calculix.CFP.PP200M/calculix.CFP.PP200M
+Actual Cycle 60000000
+opcodes Processed: 134164436 of 200001551
+Total Progress  67.0817%
+ IPC(2.236)
+ETC(00:01:06)
+==========================================================================
+
+==========================================================================
+Benchmark execs/traces/spec_cpu2006/calculix.CFP.PP200M/calculix.CFP.PP200M
+Actual Cycle 70000000
+opcodes Processed: 152885384 of 200001551
+Total Progress  76.4421%
+ IPC(2.184)
+ETC(00:00:47)
+==========================================================================
+
+==========================================================================
+Benchmark execs/traces/spec_cpu2006/calculix.CFP.PP200M/calculix.CFP.PP200M
+Actual Cycle 80000000
+opcodes Processed: 171608276 of 200001551
+Total Progress  85.8035%
+ IPC(2.145)
+ETC(00:00:29)
+==========================================================================
+
+==========================================================================
+Benchmark execs/traces/spec_cpu2006/calculix.CFP.PP200M/calculix.CFP.PP200M
+Actual Cycle 90000000
+opcodes Processed: 190326565 of 200001551
+Total Progress  95.1625%
+ IPC(2.115)
+ETC(00:00:10)
+==========================================================================
+
+End of dynamic simulation trace
+End of Simulation
+#========================================================================#
+trace_reader_t
+fetch_instructions:200001551
+#========================================================================#
+Total_Cicle : 95168693
+#===============================================#
+Stage_Opcode_and_Uop_Counters
+#===============================================#
+Stage_Fetch: 200001552
+Stage_Decode: 200001552
+Stage_Rename: 204908230
+Register_writes: 418851170
+Stage_Commit: 204908229
+#========================================================================#
+======================== MEMORY DESAMBIGUATION ===========================
+#========================================================================#
+Read_False_Positive: 538826
+Write_False_Positive: 2018754
+Solve_Address_to_Address: 1680625
+Times_Reach_MAX_PARALLEL_REQUESTS_READ: 609539
+Times_Reach_MAX_PARALLEL_REQUESTS_WRITE: 2365972
+#========================================================================#
+Instruction_Per_Cicle: 2.1015
+
+======================== EMC INFOS ===========================
+#===============================================#
+times_llc_rob_head: 2
+numero_load_deps: 0
+Total_instrucoes_dependentes: 0
+load_deps_ratio: -nan
+canceled_emc_execution: 0
+#===============================================#
+#========================================================================#
+BTB Hits: 3926596 -> 99.99
+BTB Miss: 253 -> 0.01
+
+Total Branchs: 3926849
+Total Branchs Taken: 2490894 -> 63.43 
+Total Branchs Not Taken: 1435955 -> 36.57
+Correct Branchs Taken: 2292447 -> 92.03
+Incorrect Branchs Taken: 198447 -> 7.97
+Correct Branchs Not Taken: 1216879 -> 84.74
+Incorrect Branchs Not Taken: 219076 -> 15.26
+#========================================================================#
+##############  Cache Memories ##################
+Cache_Level: INST_CACHE
+INST_CACHE_Cache_Access: 200001551
+INST_CACHE_Cache_Hits: 200001197 99.9998
+INST_CACHE_Cache_Miss: 354 0.0002
+INST_CACHE_Cache_Read: 0 0.0000
+INST_CACHE_Cache_Write: 0 0.0000
+Cache_Level: L1_DATA_CACHE
+L1_DATA_CACHE_Cache_Access: 41925354
+L1_DATA_CACHE_Cache_Hits: 41825087 99.7608
+L1_DATA_CACHE_Cache_Miss: 100267 0.2392
+L1_DATA_CACHE_Cache_Read: 36605443 87.3110
+L1_DATA_CACHE_Cache_Write: 5319911 12.6890
+L1_DATA_CACHE_Cache_WriteBack: 74710 74.8935
+Cache_Level: LLC
+LLC_Cache_Access: 100621
+LLC_Cache_Hits: 89803 89.2488
+LLC_Cache_Miss: 10818 10.7512
+LLC_Cache_Read: 84652 84.1296
+LLC_Cache_Write: 0 0.0000
+##############  PREFETCHER ##################
+Total Prefetches: 319
+Useful Prefetches: 314 -> 98.4326 
+Late Prefetches: 88 -> 27.5862 
+MediaAtraso: 114.784
+#========================================================================#
+Memory Controller
+#========================================================================#
+Requests_Made 10818
+Requests_from_LLC 10818
+Requests_from_EMC 0
+#========================================================================#
+#========================================================================#
+EMC - Enhaced Memory Controller
+#========================================================================#
+EMC_Access_LLC: 0
+EMC_Access_LLC_HIT: 0
+EMC_Access_LLC_MISS: 0
+#========================================================================#
+##############  EMC_Data_Cache ##################
+Cache_Level: EMC_DATA_CACHE
+EMC_DATA_CACHE_Cache_Access: 0
+EMC_DATA_CACHE_Cache_Hits: 0 -nan
+EMC_DATA_CACHE_Cache_Miss: 0 -nan
+EMC_DATA_CACHE_Cache_Read: 0 -nan
+EMC_DATA_CACHE_Cache_Write: 0 -nan
+#========================================================================#
+Deleting Processor
+Deleting Branch predictor
+Deleting Cache manager
+Deleting Memory Controller
