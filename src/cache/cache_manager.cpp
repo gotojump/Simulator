@@ -15,6 +15,7 @@ cache_manager_t::~cache_manager_t()=default;
 // -------------------------------------------------------------------------- //
 
 void cache_manager_t::allocate(){
+	uint32_t max, last;
 
 	//Allocate I$
 	this->inst_cache = new cache_t;
@@ -22,9 +23,22 @@ void cache_manager_t::allocate(){
 
 	this->n_caches = CACHE_LEVELS;
 	this->data_cache = new cache_t[CACHE_LEVELS];
-	for( uint32_t n = 0 ; n < CACHE_LEVELS ; n++ ){
-		this->configCache( &this->data_cache[n], Pconf.cache[DATA_CACHE + n]);
+	last = Pconf.total_levels - 1;
+
+	for( uint32_t n = 0 ; n < CACHE_LEVELS - 1 ; n++ ){
+		max = ((DATA_CACHE + n) < last) ? DATA_CACHE + n : last;
+
+		this->configCache( &this->data_cache[n], Pconf.cache[max]);
+
+		//#if CACHE_MANAGER_DEBUG
+		printf("Instalando cache %s\n", Pconf.cache[max].name);
+		//#endif
 	}
+
+	this->configCache( &this->data_cache[CACHE_LEVELS - 1], Pconf.cache[last]);
+	//#if CACHE_MANAGER_DEBUG
+	printf("Instalando cache %s\n", Pconf.cache[last].name);
+	//#endif
 
 	//Read/Write counters
 	this->set_readHit(0);

@@ -6,6 +6,10 @@
 memory_controller_t::memory_controller_t(){
 
 	this->emc = NULL;
+	this->requests_made = 0;
+	this->operations_executed = 0;
+	this->requests_emc = 0;
+	this->requests_llc = 0;
 };
 
 // -------------------------------------------------------------------------- //

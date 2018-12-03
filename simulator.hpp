@@ -99,12 +99,12 @@ extern proc_conf Pconf;
 #define TRACE_LINE_SIZE			512
 
 // Defines Simulators Caracteristics
-#define MAX_UOP_DECODED 5
-#define MAX_REGISTERS 6										// opcode_package_t uop_package_t	(Max number of register (read or write) for one opcode/uop)
+#define MAX_UOP_DECODED		5
+#define MAX_REGISTERS			6								// opcode_package_t uop_package_t	(Max number of register (read or write) for one opcode/uop)
 #define MAX_ASSEMBLY_SIZE 32							// In general 20 is enough
 
 // Model simulator
-#define MODEL_NAME				"models/skylake.cfg"
+#define MODEL_NAME				"models/sandyBridge.cfg"
 
 // -------------------------------------------------------------------------- //
 

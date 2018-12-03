@@ -122,6 +122,13 @@ int check_config( libconfig::Config &conf ){
 	bool res;
 
 	res = true;
+
+	res &= conf.lookupValue( "processor.name", Pconf.name );
+	if( !res ){
+		ORCS_PRINTF("Fail to read model name!");
+		return 0;
+	}
+
 	res &= conf.lookupValue( "processor.stages_widht.fetch", Pconf.width.fetch );
 	res &= conf.lookupValue( "processor.stages_widht.decode", Pconf.width.decode );
 	res &= conf.lookupValue( "processor.stages_widht.rename", Pconf.width.rename );
@@ -276,6 +283,7 @@ int check_config( libconfig::Config &conf ){
 
 	res &= conf.lookupValue( "processor.caches.ram.latency", Pconf.ram.latency );
 	res &= conf.lookupValue( "processor.caches.ram.size", Pconf.ram.size );
+	res &= conf.lookupValue( "processor.caches.ram.max_parallel_requests", Pconf.max_parallel_requests );
 
 	if( !res ){
 		ORCS_PRINTF("Fail to read ram cache configuration!");
@@ -383,7 +391,7 @@ int main(int argc, char **argv) {
 	if( !check_config( conf ) )
 		return 0;
 	else
-		ORCS_PRINTF("Configurações lidas corretamente!!\n")
+		ORCS_PRINTF("Configurações lidas corretamente!!\nUtilizando modelo %s.\n\n", Pconf.name)
 
 	// Call all the allocate's
 	orcs_engine.allocate();

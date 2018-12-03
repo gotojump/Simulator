@@ -2050,7 +2050,7 @@ void processor_t::statistics(){
 		fprintf(output, "Write_False_Positive: %lu\n", this->get_stat_disambiguation_write_false_positive());
 		fprintf(output, "Solve_Address_to_Address: %lu\n", this->get_stat_address_to_address());
 
-		#if MAX_PARALLEL_REQUESTS
+		#if PARALLEL_REQUESTS
 		fprintf(output, "Times_Reach_MAX_PARALLEL_REQUESTS_READ: %lu\n", this->get_times_reach_parallel_requests_read());
 		fprintf(output, "Times_Reach_MAX_PARALLEL_REQUESTS_WRITE: %lu\n", this->get_times_reach_parallel_requests_write());
 		#endif

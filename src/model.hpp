@@ -3,8 +3,8 @@
  *Arquivo definindo os parametros do modelo de processador
  */
 
-#ifndef SKYLAKE_H
-#define SKYLAKE_H
+#ifndef MODEL_H
+#define MODEL_H
 
 // ========================================================================== //
 
@@ -99,6 +99,8 @@ typedef struct emc_sizes{
 // -------------------------------------------------------------------------- //
 
 typedef struct proc_conf{
+	const char* name;
+
 	stages width, latency;
 
 	FU int_alu, int_mul, int_div;
@@ -115,6 +117,7 @@ typedef struct proc_conf{
 	uint32_t line_size, cache_levels, total_levels, instruction_enabled, offset_size;
 
 	caches *cache, ram, emc_cache;
+	uint32_t max_parallel_requests;
 
 	prefet pref;
 	mem_desamb md;
@@ -318,6 +321,7 @@ typedef struct proc_conf{
 // RAM
 #define RAM_LATENCY						Pconf.ram.latency
 #define RAM_SIZE							Pconf.ram.size
+#define MAX_PARALLEL_REQUESTS	Pconf.max_parallel_requests
 
 // -------------------------------------------------------------------------- //
 
@@ -390,7 +394,7 @@ typedef struct proc_conf{
 #define HEARTBEAT								1
 #define SANITY_CHECK						0
 #define PERIODIC_CHECK					0
-#define MAX_PARALLEL_REQUESTS	 10
+#define PARALLEL_REQUESTS				1
 #define TWO_BIT									0
 #define PIECEWISE								1
 
