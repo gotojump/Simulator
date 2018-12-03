@@ -104,7 +104,7 @@ extern proc_conf Pconf;
 #define MAX_ASSEMBLY_SIZE 32							// In general 20 is enough
 
 // Model simulator
-#define MODEL_NAME				"models/sandyBridge.cfg"
+#define MODEL_NAME				"models/skylake.cfg"
 
 // -------------------------------------------------------------------------- //
 

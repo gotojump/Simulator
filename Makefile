@@ -182,6 +182,10 @@ objs: sim trace_reader package processor other branch_predictor\
 
 # ============================================================================ #
 
+libconfig:
+	sudo apt-get update
+	sudo apt-get install libconfig-dev
+
 exec:
 	time ./orcs -t src/execs/traces/spec_cpu2006/calculix.CFP.PP200M/calculix.CFP.PP200M
 
